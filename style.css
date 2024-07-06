@@ -30,7 +30,7 @@ body {
 form {
   display: grid;
   gap: 1rem;
-  padding: 1rem;
+  padding: 3%;
 
   background: var(--White);
   border-radius: 1rem;

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+
+  <title>Frontend Mentor | Contact form</title>
+  <!-- style -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- style -->
+</head>
+
+<body>
+  <form action="" onsubmit="submit()">
+    <h2>Contact Us</h2>
+
+    <!------------------------------------------- name field  -->
+    <div class="flex-div">
+      <div class="input">
+        <label class="label-50" for="First-Name">First Name <span> *</span>
+        </label>
+        <input id="FirstName" type="text" name="First-Name" />
+        <!-- This field is required -->
+      </div>
+      <div class="input">
+        <label class="label-50" for="Last-Name">
+          Last Name<span> *</span>
+        </label>
+        <input id="LastName" type="text" name="Last-Name" />
+        <!-- This field is required -->
+      </div>
+    </div>
+    <!-- -----------------------------------------------email field -->
+    <label for="Email"> Email Address<span> *</span> </label>
+    <input id="Email" type="email" name="Email" />
+    <!-- Please enter a valid email address -->
+    <!-- This field is required -->
+
+    <!-- -----------------------------------------------query type -->
+    <div class="flex-div">
+      <label for=""> Query Type<span> *</span> </label><br />
+      <div class="query-type">
+        <input type="radio" name="Query-Type" id="Support-Request" value="General Query" />
+        General Enquiry
+      </div>
+
+      <div class="query-type">
+        <input type="radio" name="Query-Type" id="Support-Request" value="Support Request" />
+        Support Request
+      </div>
+      <!-- Please select a query type -->
+    </div>
+
+    <!-- -----------------------------------------------message field -->
+    <label for=""> Message<span> *</span> <br /> </label>
+    <textarea id="Message" name="Message" cols="30" rows="10"></textarea>
+    <!-- This field is required -->
+    <div>
+      <input type="checkbox" required="true" />I consent to being contacted by the team
+    </div>
+
+    <!-- To submit this form, please consent to being contacted -->
+    <button id="submitBtn" type="submit">Submit</button>
+  </form>
+
+  <!--  -->
+
+  <div class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="https://ahmed-mustafa.netlify.app/#services">Ahmed Mustafa</a>.
+  </div>
+
+  <!-- js file -->
+  <script>
+    document.getElementById('submitBtn').addEventListener('click', submit);
+    function submit(event) {
+      var FirstName = document.getElementById('FirstName');
+      var LastName = document.getElementById('LastName');
+      var Email = document.getElementById('Email');
+      var Message = document.getElementById('Message');
+      if (FirstName.value == '' || LastName.value == '' || Email.value == '' || Email.value != email || Message.value == '') {
+        alert('Please fill in all the fields');
+      } else {
+        alert(`Message Sent! Thanks for completing the form. We well be in touch soon`);
+      }
+    }
+  </script>
+  <!-- js file -->
+</body>
+
+</html>

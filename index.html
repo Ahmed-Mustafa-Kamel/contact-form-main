@@ -85,6 +85,7 @@
       var Message = document.getElementById('Message');
       if (FirstName.value == '' || LastName.value == '' || Email.value == '' || Email.value != email || Message.value == '') {
         alert('Please fill in all the fields');
+        document.body.style.background = 'red'
       } else {
         alert(`Message Sent! Thanks for completing the form. We well be in touch soon`);
       }
